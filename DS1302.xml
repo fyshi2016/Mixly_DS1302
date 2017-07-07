@@ -1,0 +1,62 @@
+<!-- type="company" 
+     block="block/DS1302.js"
+	 generator="generator/DS1302.js" 
+	 lib="DS1302" 
+	 -->
+<script type="text/javascript" src="../../blocks/company/DS1302.js"></script>
+<script type="text/javascript" src="../../generators/arduino/company/DS1302.js"></script>
+<!--引用所有写好的模块，这里引入了"延时"模块-->
+<category name="DS1302" colour="120">
+    <block type="DS1302_init">
+        <value name="RST">
+            <shadow type="pins_digital">
+                <field name="NUM">2</field>
+            </shadow>
+        </value>
+        <value name="DAT">
+            <shadow type="pins_digital">
+                <field name="NUM">3</field>
+            </shadow>
+        </value>
+        <value name="CLK">
+            <shadow type="pins_digital">
+                <field name="NUM">4</field>
+            </shadow>
+        </value>
+    </block>
+    <!--初始化-->
+    <block type="DS1302_set_date">
+        <value name="YEAR">
+            <shadow type="math_number">
+                <field name="NUM">2017</field>
+            </shadow>
+        </value>
+        <value name="MONTH">
+            <shadow type="math_number">
+                <field name="NUM">7</field>
+            </shadow>
+        </value>
+        <value name="DAY">
+            <shadow type="math_number">
+                <field name="NUM">13</field>
+            </shadow>
+        </value>
+        <value name="HOUR">
+            <shadow type="math_number">
+                <field name="NUM">9</field>
+            </shadow>
+        </value>
+        <value name="MINUTE">
+            <shadow type="math_number">
+                <field name="NUM">57</field>
+            </shadow>
+        </value>
+        <value name="SECOND">
+            <shadow type="math_number">
+                <field name="NUM">13</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="DS1302_get_date"></block>
+    <block type="DS1302_get_time"></block>
+</category>
